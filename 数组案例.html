@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //求和，平均值
+        var arr = [2,6,1,7,4];
+        var sum = 0;
+        var average = 0;
+        for (var i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        average = sum / arr.length;
+        console.log(sum, average);
+        //求数组最大值
+        var arr2 = [2,6,1,77,52,25,7];
+        var max = arr2[0];
+        for (var j = 1; j < arr2.length; j++ ){
+            if ( arr2[j] > max){
+                max = arr2[j];
+            }
+        }
+        console.log('此数组最大值是：' + max);
+        //字符转字符串，分割字符串
+        var arr3 = ['red','green','blue','pink'];
+        var str = '';
+                //var sep = '|'
+        for (var k = 0; k < arr3.length; k++){
+            str += arr3[k] + '|';//str += arr3[k] + sep;
+        }
+        console.log(str);
+        //数组存放1~10个值
+        var arr4 = []
+        for (var l = 0; l <10; l++){
+            arr4[l] = l + 1;
+        }
+        console.log(arr4);
+        //筛选数组1
+        var arr5 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newarr5 = [];
+        var t = 0;
+        for (var r = 0; r < arr5.length; r++){
+            if (arr5[r] > 10){
+                newarr5[t] = arr5[r];
+                t++;
+            }
+        }
+        console.log(newarr5);
+        //2
+        var arr6 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newarr6 = [];
+        for (var u = 0; u < arr6.length; u++){
+            if (arr6[u] > 10){
+                newarr6[newarr6.length] = arr6[u];
+            }
+        }
+        console.log(newarr6);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
