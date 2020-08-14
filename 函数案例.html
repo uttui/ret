@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //函数计算1~100的和
+        function getSum(){
+            var sum = 0;
+            for (var i = 1; i <= 100; i++){
+                sum += i;
+            }
+            console.log(sum);
+        }
+        getSum()
+
+        //任意两个数的和
+        function getSum(num1, num2) {
+            console.log(num1 + num2);
+        }
+        getSum(1, 2);
+
+        //任意两个数之间的和
+        function getSums(num3, num4){
+            var sum = 0;
+            for (var j = num3; j <= num4; j++){
+                sum += j;
+            }
+            console.log(sum);
+        }
+        getSums(1, 15)
+
+        //运用返回值求两个数的和
+        function getSum3(num5, num6){
+            return num5 + num6;
+        }
+        console.log(getSum3(3, 5));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

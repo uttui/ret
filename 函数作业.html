@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //判断质数
+        function getNum(num) {
+            var count = 0;
+            for (var i = 1; i <= num; i++) {
+                if (num % i == 0) {
+                    count++;
+                }
+            }
+            if (count == 2) {
+            return '是';
+            } else {
+                return '不是';
+            }
+        }
+        var num = prompt('请输入一个数:');
+        var res = getNum(num);
+        alert('这个数' + res + '质数');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

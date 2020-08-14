@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        do {
+            var getNumber = parseInt(prompt('请选择您要进行的运算\n1、加法\n2、减法\n3、乘法\n4、除法\n5、退出'));
+            if (getNumber == 1 || getNumber == 2 || getNumber == 3 || getNumber == 4) {
+            var num1 = parseInt(prompt('请输入第一个数字'));
+            var num2 = parseInt(prompt('请输入第二个数字'));
+            switch (getNumber) {
+                case 1:
+                alert('和为' + (num1 + num2));
+                break;
+                case 2:
+                alert('差为' + (num1 - num2));
+                break;
+                case 3:
+                alert('乘机为' + (num1 * num2));
+                break;
+                case 4:
+                alert('商为' + (num1 / num2));
+                break;
+            }
+        } else  if (getNumber == 5) {
+        alert('您已成功退出')
+        } 
+        } while (getNumber != 5)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
