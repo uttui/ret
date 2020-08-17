@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //arguments 使用
+        function fn() {
+            //console.log(arguments);
+            //console.log(arguments.length);
+            //console.log(arguments[2]);
+            for (var i = 0; i <arguments.length; i++){
+                console.log(arguments[i]);
+            }
+        }
+        fn(1, 2, 3, 4)
+
+        //求最大值
+        function getMax(){
+            var max = arguments[0];
+            for (var j = 1; j < arguments.length; j++){
+                if (arguments[j] > max){
+                    max = arguments[j];
+                }
+            }
+            return max;
+        }
+        console.log(getMax(1, 4, 33, 22, 3));
+
+        //翻转数组
+        function reverse(arr) {
+            var newArr = [];
+            for (var k = arr.length-1; k >= 0; k--){
+                newArr[newArr.length] = arr[k];
+            }        
+            return newArr;
+        }
+        var arr1 = reverse([1, 3, 5, 7, 9])
+        console.log(arr1);
+
+        //利用函数冒泡排序
+        function sort(arr2) {
+            for (var m = 0; m < arr2.length - 1; m++){
+                for (var n = 0; n < arr2.length - m - 1; n++){
+                    if (arr2[n] > arr2[n + 1]) {
+                        var temp = arr2[n];
+                        arr2[n] = arr2[n + 1];
+                        arr2[n + 1] = temp;
+                    }
+                }
+            }
+            return arr2;
+        }
+        var arr3 =  sort([1, 4, 2, 7, 9]);
+        console.log(arr3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
