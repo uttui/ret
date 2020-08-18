@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //字面量创建对象
+        var dog = {
+            uname: '可可',
+            type: '阿拉斯加犬',
+            age: 5,
+            colors: '棕红色',
+            bark: function() {
+                console.log('汪汪汪');
+            },
+            showFilm: function() {
+                console.log('演电影');
+            }
+        }
+        console.log(dog.uname);
+        console.log(dog.type);
+        console.log(dog.age);
+        console.log(dog.colors);
+        dog.bark();
+        dog.showFilm();
+
+        //new Object创建
+        var obj = new Object();
+        obj.uname = '鸣人';
+        obj.sex = '男';
+        obj.age = 19;
+        obj.skill = function() {
+                console.log('影分身术');
+            }
+        console.log(obj.uname);
+        console.log(obj.sex);
+        console.log(obj.age);
+        obj.skill();
+
+        //构造函数创建
+        function Ying(name, type, blood) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(xiong){
+                console.log(xiong);
+            }
+        }
+        var lian = new Ying('廉颇', '力量型', '500血量')
+        console.log(lian.name);
+        console.log(lian.type);
+        console.log(lian.blood);
+        lian.attack('近战');
+        var hou = new Ying('后裔','射手型', '100血量')
+        console.log(hou.name);
+        console.log(hou.type);
+        console.log(hou.blood);
+        hou.attack('远程');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
