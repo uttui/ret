@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //封装自己的数学对象
+        var myMsth = {
+            PI: 3.141592653,
+            max: function() {
+                var max = arguments[0];
+                for (var i = 1; i < arguments.length; i++){
+                    if (arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            },
+            min: function() {
+                var min = arguments[0];
+                for (var i = 1; i > arguments.length; i++){
+                    if (arguments[i] < min) {
+                        min = arguments[i];
+                    }
+                }
+                return min;
+            }
+        }
+        console.log(myMsth.PI);
+        console.log(myMsth.max(1, 3, 6));
+        console.log(myMsth.min(1, 2, 4));
+
+        //得到两个数之间的随机整数，并且包含这两个数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandom(1, 10));
+        //随机点名
+        var arr1 = ['他', '套', '贴','张'];
+        console.log(arr1[getRandom(0, 4)]);
+
+        //筛选数组
+        var arr2 = [1500, 1200, 1800, 2100, 2000]
+        var newArr2 = [];
+        for (var i = 0; i < arr2.length; i++) {
+            if (arr2[i] < 1800){
+                newArr2.push(arr2[i]);
+            }
+        }
+        console.log(newArr2);
+
+        //数组去重
+        function unique(arr) {
+            var newArr = [];
+            for (var j = 0; j < arr.length; j++) {
+                if (newArr.indexOf(arr[j]) === -1) {
+                    newArr.push(arr[j]);
+                }
+            }
+            return newArr;
+        }
+        var demo = unique([1, 3, 3, 2, 8, 7])
+        console.log(demo);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
