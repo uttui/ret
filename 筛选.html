@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //var str = "opasossodfozzpoqq";
+        //var index = str.indexOf('o');
+        //var num = 0;
+        //while (index !== -1){
+        //    console.log(index);
+        //    num++;
+        //    index = str.indexOf('o', index + 1);
+        //}
+        //console.log('o出现的次数是 ' + num);
+        var str = "red, blue, red, green, pink, red";
+        var index = str.indexOf('red');
+        var num = 0;
+        while (index !== -1){
+            console.log(index);
+            num++;
+            index = str.indexOf('red', index + 1);
+        }
+        console.log('red出现的次数是 ' + num);
+
+        //统计出现次数最多的字符
+        var str2 = 'opasossodfozzpoqq';
+        var o = {};
+        for (var i = 0; i < str2.length; i++){
+            var chars = str2.charAt(i);
+            if (o[chars]) {
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log('最多的字符是' + ch);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
